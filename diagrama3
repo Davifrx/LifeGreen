@@ -1,0 +1,21 @@
+---
+config:
+  layout: elk
+---
+graph TB
+    UserInterface["Camada de Interface (React Components)"]
+    StateMgmt["Gerenciamento de Estado (Redux/Zustand)"]
+    APICalls["Módulo de Comunicação com API (Axios/Fetch)"]
+    Routing["Gerenciamento de Rotas (React Router)"]
+    AuthModule["Módulo de Autenticação"]
+    UIElements["Componentes Reutilizáveis (Botões, Cards, Inputs)"]
+
+    UserInterface --> Routing
+    UserInterface --> StateMgmt
+    StateMgmt --> APICalls
+    Routing --> APICalls
+    APICalls --> AuthModule
+    APICalls --> UIElements
+
+    classDef fe fill:#f0f9ff,stroke:#38bdf8
+    class UserInterface,StateMgmt,APICalls,Routing,AuthModule,UIElements fe
