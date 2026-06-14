@@ -1,6 +1,9 @@
 # DIAGRAMA C4 — NÍVEL CONTEXT (C1)
 ## Imagem
-![Diagrama C1](DIAGRAMA C4 — NÍVEL CONTEXT (C1).png)
+![Diagrama C1](diagrama1.png)
+
+## Código
+```mermaid
 ---
 config:
   layout: elk
@@ -12,7 +15,6 @@ graph TB
         LifeGreenSystem["Plataforma LifeGreen"]
         PaymentGateway["Gateway de Pagamento"]
         EmailService["Serviço de E-mail"]
-
         Client -->|Faz compras e visualiza produtos| LifeGreenSystem
         Producer -->|Gerencia produtos e pedidos| LifeGreenSystem
         LifeGreenSystem -->|Processa pagamentos| PaymentGateway
@@ -20,11 +22,10 @@ graph TB
         PaymentGateway -->|Confirma transações| LifeGreenSystem
         EmailService -->|Confirma envio de e-mails| LifeGreenSystem
     end
-
     classDef client fill:#ecfeff,stroke:#22d3ee
     classDef system fill:#eef2ff,stroke:#818cf8
     classDef external fill:#fff7ed,stroke:#fb923c
-
     class Client,Producer client
     class LifeGreenSystem system
     class PaymentGateway,EmailService external
+```
