@@ -1,6 +1,6 @@
 # DIAGRAMA C4 — NÍVEL CONTEXT (C1)
 ## Imagem
-![DIAGRAMA C4 — NÍVEL CONTEXT (C1)](DIAGRAMA C4 — NÍVEL CONTEXT (C1))
+![Diagrama C1](DIAGRAMA C4 — NÍVEL CONTEXT (C1).png)
 ---
 config:
   layout: elk
