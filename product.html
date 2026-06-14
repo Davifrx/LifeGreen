@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🌱</span>
+                LifeGreen
+            </a>
+
+            <form class="search-bar">
+                <input
+                    type="search"
+                    placeholder="O que procura?"
+                    aria-label="Pesquisar produtos"
+                >
+            </form>
+
+            <div class="header-actions">
+                <a href="login.html" class="action-link">
+                    <span>👤</span>
+                    Minha Conta
+                </a>
+
+                <a href="carrinho.html" class="action-link">
+                    <span>🛒</span>
+                    Carrinho
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#">Categorias</a>
+                <a href="#">Assine</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="product-details">
+            <div class="product-gallery">
+                <img
+                    src="img/banana.png"
+                    alt="Banana Prata"
+                    class="main-product-image"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">Início</a>
+
+                    <span>/</span>
+
+                    <a href="catalogo.html">Nossa Horta</a>
+
+                    <span>/</span>
+
+                    <span>Frutas</span>
+
+                </div>
+
+                <h1>
+                    Banana Prata (500g - 600g)
+                </h1>
+
+                <span class="producer">
+                    Agricultor: João Silva
+                </span>
+
+                <div class="product-price">
+                    R$ 9,99
+                </div>
+
+                <div class="quantity-selector">
+
+                    <button>-</button>
+
+                    <span>1</span>
+
+                    <button>+</button>
+
+                </div>
+
+                <div class="product-actions">
+
+                    <button class="add-cart">
+                        Adicionar ao Carrinho
+                    </button>
+
+                    <button class="add-subscription">
+                        Adicionar à Assinatura
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="product-description">
+            <h2>Descrição</h2>
+
+            <p>
+                Banana prata produzida por pequenos agricultores parceiros da LifeGreen.
+                Rica em potássio, fibras e vitaminas essenciais para uma alimentação saudável.
+            </p>
+        </section>
+
+        <section class="producer-section">
+            <h2>Sobre o Agricultor</h2>
+
+            <p>
+                João Silva cultiva frutas orgânicas há mais de 15 anos utilizando
+                técnicas sustentáveis e sem agrotóxicos.
+            </p>
+        </section>
+
+        <section class="related-products">
+            <div class="section-header">
+                <h2>Produtos Relacionados</h2>
+            </div>
+
+            <div class="products-grid">
+                <article
+                    class="product-card"
+                    data-category="legumes"
+                    data-price="9.99"
+                >
+                    <img
+                        src="img/banana.png"
+                        alt="Banana Prata"
+                    >
+
+                    <h3>Banana Prata</h3>
+
+                    <p class="product-description">
+                        (500g - 600g) - LifeGreen
+                    </p>
+
+                    <span class="product-price">
+                        R$ 9,99
+                    </span>
+
+                    <button>
+                        Adicionar
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

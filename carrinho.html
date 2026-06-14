@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <main class="cart-container">
+        <section class="cart-section">
+            <div class="cart-header">
+                <h1>Seu carrinho</h1>
+
+                <button class="checkout-btn">
+                    Finalizar pedido
+                </button>
+            </div>
+
+            <div class="cart-table">
+                <div class="cart-table-header">
+                    <span>Produtos</span>
+                    <span>Preço</span>
+                    <span>Qtd</span>
+                    <span>Total</span>
+                </div>
+
+                <!-- ITEM -->
+
+                <article class="cart-item">
+                    <div class="product-info">
+                        <img
+                            src="img/banana.png"
+                            alt="Banana Prata"
+                        >
+
+                        <p>
+                            Banana Prata (500g - 600g) - LifeGreen
+                        </p>
+                    </div>
+
+                    <span class="price">
+                        R$ 9,99
+                    </span>
+
+                    <div class="quantity">
+                        <button>-</button>
+                        <span>3</span>
+                        <button>+</button>
+                    </div>
+
+                    <span class="total">
+                        R$ 29,97
+                    </span>
+                </article>
+
+                <!-- repetir item -->
+
+                <article class="cart-item">
+                    <div class="product-info">
+                        <img
+                            src="img/banana.png"
+                            alt="Banana Prata"
+                        >
+
+                        <p>
+                            Banana Prata (500g - 600g) - LifeGreen
+                        </p>
+                    </div>
+
+                    <span class="price">
+                        R$ 9,99
+                    </span>
+
+                    <div class="quantity">
+                        <button>-</button>
+                        <span>3</span>
+                        <button>+</button>
+                    </div>
+
+                    <span class="total">
+                        R$ 29,97
+                    </span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ENTREGA + RESUMO -->
+
+        <section class="checkout-area">
+
+            <!-- ENTREGA -->
+
+            <div class="delivery">
+                <h2>Entrega</h2>
+                <p>
+                    Veja as opções de entrega para seus itens,
+                    com todos os prazos e valores.
+                </p>
+
+                <div class="cep-form">
+                    <input
+                        type="text"
+                        placeholder="00000-000"
+                    >
+
+                    <button>
+                        Calcular
+                    </button>
+                </div>
+            </div>
+
+            <!-- RESUMO -->
+
+            <aside class="order-summary">
+                <div class="coupon">
+                    <label>Cupom</label>
+
+                    <div class="coupon-form">
+                        <input type="text">
+
+                        <button>
+                            Aplicar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="summary-row">
+                    <span>Produtos</span>
+
+                    <span>R$ 00,00</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Descontos</span>
+
+                    <span>R$ 00,00</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Entrega</span>
+
+                    <span>R$ 00,00</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+
+                    <strong>R$ 89,91</strong>
+                </div>
+
+                <button class="checkout-btn">
+                    Finalizar pedido
+                </button>
+            </aside>
+        </section>
+
+        <!-- PAGAMENTO -->
+
+        <section class="payment-methods">
+            <h2>Formas de pagamento</h2>
+            <div class="payment-placeholder">
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

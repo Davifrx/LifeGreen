@@ -1,0 +1,212 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F3FBEE;
+}
+
+/* Pedido confirmado */
+
+.order-success{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4rem 2rem;
+}
+
+.success-card{
+    background:white;
+    max-width:700px;
+    width:100%;
+    padding:3rem;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.success-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 2rem;
+    border-radius:50%;
+    background:#AAB874;
+    color:#2F4F46;
+    font-size:3rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.success-card h1{
+    color:#2F4F46;
+    margin-bottom:1rem;
+}
+
+.success-message{
+    color:#666;
+    margin-bottom:2rem;
+}
+
+.order-info{
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:2.5rem;
+}
+
+.info-item{
+    flex:1;
+    background:#F3FBEE;
+    padding:1rem;
+    border-radius:10px;
+}
+
+.info-item span{
+    display:block;
+    color:#777;
+    margin-bottom:.5rem;
+}
+
+.success-actions{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+}
+
+/* Acompanhar Pedido */
+
+.order-tracking{
+    max-width:1200px;
+    margin:0 auto;
+    padding:4rem 2rem;
+}
+
+.tracking-header{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.tracking-header h1{
+    color:#2F4F46;
+    margin-bottom:.5rem;
+}
+
+.tracking-header p{
+    color:#777;
+}
+
+.tracking-status{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:4rem;
+}
+
+.status-step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.8rem;
+}
+
+.status-circle{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:2px solid #AAB874;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    color:#2F4F46;
+    background:white;
+}
+
+.status-step.active .status-circle{
+    background:#AAB874;
+}
+
+.status-line{
+    width:100px;
+    height:3px;
+    background:#D9D9D9;
+    margin:0 .5rem;
+}
+
+.status-line.active{
+    background:#AAB874;
+}
+
+.status-step span{
+    font-size:.9rem;
+    text-align:center;
+    color:#555;
+}
+
+.tracking-details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+
+.detail-card{
+    background:white;
+    border-radius:12px;
+    padding:1.5rem;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.detail-card h3{
+    color:#2F4F46;
+    margin-bottom:.8rem;
+}
+
+.previous-orders{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2rem 4rem;
+}
+
+.orders-list{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.order-card{
+    background:white;
+    border-radius:12px;
+    padding:1.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.order-card h3{
+    color:#2F4F46;
+    margin-bottom:.3rem;
+}
+
+.order-card span{
+    color:#777;
+}
+
+.order-status{
+    padding:.5rem 1rem;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.delivered{
+    background:#DDF5D8;
+    color:#2F4F46;
+}
+
+.order-button{
+    text-decoration:none;
+    background:#2F4F46;
+    color:white;
+    padding:.8rem 1.2rem;
+    border-radius:8px;
+}

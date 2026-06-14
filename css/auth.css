@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    min-height:100vh;
+
+    background:#F0F4EA;
+}
+
+.auth-container{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:40% 60%;
+}
+
+/* LADO ESQUERDO */
+
+.auth-image{
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+    url("../img/login-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-image h1{
+
+    color:white;
+
+    font-size:4rem;
+
+    letter-spacing:6px;
+
+    font-weight:300;
+}
+
+/* LADO DIREITO */
+
+.auth-form{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:3rem;
+}
+
+.form-wrapper{
+
+    width:100%;
+    max-width:500px;
+}
+
+.form-wrapper h2{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    margin-bottom:3rem;
+
+    color:#000;
+}
+
+.input-group{
+
+    margin-bottom:2rem;
+}
+
+.input-group label{
+
+    display:block;
+
+    color:#777;
+
+    margin-bottom:.5rem;
+}
+
+.input-group input{
+
+    width:100%;
+
+    border:none;
+
+    border-bottom:1px solid #777;
+
+    background:transparent;
+
+    padding:.8rem 0;
+
+    font-size:1rem;
+
+    outline:none;
+}
+
+.password-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.password-header a{
+
+    text-decoration:none;
+
+    color:#2E7D32;
+
+    font-size:.9rem;
+}
+
+button{
+
+    display:block;
+
+    margin:3rem auto;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:1rem 3rem;
+
+    border-radius:6px;
+
+    background:#A8D67B;
+
+    color:#000;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+}
+
+.register-link{
+
+    text-align:center;
+
+    margin-top:3rem;
+}
+
+.register-link a{
+
+    text-decoration:none;
+
+    color:#2E7D32;
+
+    font-weight:600;
+}

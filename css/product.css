@@ -1,0 +1,109 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F3FBEE;
+}
+
+.product-details{
+    max-width:1200px;
+    margin:4rem auto;
+    padding:0 2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4rem;
+}
+
+.product-gallery{
+    background:white;
+    border-radius:16px;
+    padding:2rem;
+    border:1px solid #DCE5D5;
+}
+
+.main-product-image{
+    width:100%;
+    height:500px;
+    object-fit:contain;
+}
+
+.breadcrumb{
+    margin-bottom:1rem;
+}
+
+.breadcrumb a{
+    text-decoration:none;
+    color:#777;
+}
+
+.product-info h1{
+    color:#2F4F46;
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+
+.producer{
+    display:block;
+    color:#666;
+    margin-bottom:2rem;
+}
+
+.product-price{
+    font-size:2.5rem;
+    font-weight:700;
+    color:#2F4F46;
+    margin-bottom:2rem;
+}
+
+.quantity-selector{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.quantity-selector button{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:8px;
+    background:#AAB874;
+    cursor:pointer;
+}
+
+.product-actions{
+    display:flex;
+    gap:1rem;
+}
+
+.add-cart,
+.add-subscription{
+    padding:1rem 2rem;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.add-cart{
+    background:#2F4F46;
+    color:white;
+}
+
+.add-subscription{
+    background:#AAB874;
+    color:#2F4F46;
+}
+
+.product-description,
+.producer-section,
+.related-products{
+    max-width:1200px;
+    margin:4rem auto;
+    padding:0 2rem;
+    font-size:1rem;
+    color: rgb(18, 18, 18);
+}
+
+.product-description h2,
+.producer-section h2{
+    margin-bottom:1rem;
+    color:#2F4F46;
+}
