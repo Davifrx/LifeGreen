@@ -1,4 +1,4 @@
-# Diagrama 4 - Detalhamento do Back-End
+# Diagrama 4 - DIAGRAMA C4 — NÍVEL COMPONENT (C3)
 ## Imagem
 ![Diagrama 4](diagrama4.png)
 ---
