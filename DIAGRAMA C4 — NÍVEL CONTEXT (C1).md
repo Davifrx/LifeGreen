@@ -1,4 +1,4 @@
-# Diagrama 1 - Contexto do Sistema
+# Diagrama 1 - DIAGRAMA C4 — NÍVEL CONTEXT (C1)
 
 ## Imagem
 ![Diagrama 1](diagrama1.png)
