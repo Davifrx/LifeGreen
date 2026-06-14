@@ -1,4 +1,4 @@
-# Diagrama 3 - Detalhamento do Front-End
+# Diagrama 3 - DIAGRAMA C4 — NÍVEL CONTAINER (C2)
 ## Imagem
 ![Diagrama 3](diagrama3.png)
 
