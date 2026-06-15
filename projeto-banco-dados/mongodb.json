@@ -1,0 +1,18 @@
+{
+  "_id": "665a1",
+  "titulo": "Salada Tropical",
+  "tempo_preparo": 15,
+  "ingredientes": [
+    "Alface",
+    "Tomate",
+    "Manga",
+    "Cenoura"
+  ],
+  "modo_preparo": [
+    "Lavar os ingredientes",
+    "Cortar os vegetais",
+    "Misturar tudo"
+  ],
+  "categoria": "Saladas",
+  "imagem": "salada.jpg"
+}
