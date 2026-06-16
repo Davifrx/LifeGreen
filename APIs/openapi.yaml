@@ -1,0 +1,189 @@
+openapi: 3.0.3
+info:
+  title: LifeGreen API
+  description: |
+    API oficial da plataforma LifeGreen, um marketplace sustentável
+    que conecta consumidores a pequenos produtores locais.
+  version: 1.0.0
+
+servers:
+  - url: https://api.lifegreen.com/v1
+    description: Produção
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Clientes
+  - name: Autenticação
+  - name: Produtos
+  - name: Pedidos
+  - name: Assinaturas
+
+paths:
+  /clientes:
+    post:
+      tags: [Clientes]
+      summary: Cadastrar cliente
+      security: [] 
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClienteCadastro'
+            example:
+              nome: Davi Freitas
+              email: davi@email.com
+              senha: 12345678
+              telefone: (11)99999-9999
+      responses:
+        '201': {description: Cliente cadastrado}
+        '400': {description: Dados inválidos}
+        '409': {description: Email já cadastrado}
+
+  /auth/login:
+    post:
+      tags: [Autenticação]
+      summary: Login do cliente
+      security: [] 
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, senha]
+              properties:
+                email: {type: string}
+                senha: {type: string}
+      responses:
+        '200': {description: Login realizado com sucesso}
+        '401': {description: Credenciais inválidas}
+
+  /clientes/{id}:
+    get:
+      tags: [Clientes]
+      summary: Consultar cliente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        '200': {description: Cliente encontrado}
+        '404': {description: Cliente não encontrado}
+
+    put:
+      tags: [Clientes]
+      summary: Atualizar cliente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        '200': {description: Cliente atualizado}
+        '404': {description: Cliente não encontrado}
+
+  /produtos/busca:
+    get:
+      tags: [Produtos]
+      summary: Buscar produtos por nome
+      security: [] 
+      parameters:
+        - name: nome
+          in: query
+          schema: {type: string}
+      responses:
+        '200': {description: Busca realizada}
+
+  /produtos:
+    get:
+      tags: [Produtos]
+      summary: Listar produtos
+      security: [] 
+      responses:
+        '200': {description: Lista de produtos retornada}
+
+  /produtos/{id}:
+    get:
+      tags: [Produtos]
+      summary: Consultar produto
+      security: [] 
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        '200': {description: Produto encontrado}
+        '404': {description: Produto não encontrado}
+
+  /pedidos:
+    post:
+      tags: [Pedidos]
+      summary: Criar pedido
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [itens]
+              properties:
+                itens:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      produtoId: {type: integer}
+                      quantidade: {type: integer}
+      responses:
+        '201': {description: Pedido criado}
+
+  /pedidos/{id}:
+    get:
+      tags: [Pedidos]
+      summary: Consultar pedido
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        '200': {description: Pedido encontrado}
+        '404': {description: Pedido não encontrado}
+
+  /assinaturas:
+    post:
+      tags: [Assinaturas]
+      summary: Criar assinatura
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [planoId]
+              properties:
+                planoId: {type: integer}
+      responses:
+        '201': {description: Assinatura criada}
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    ClienteCadastro:
+      type: object
+      required: [nome, email, senha]
+      properties:
+        nome: {type: string}
+        email: {type: string}
+        senha: {type: string}
+        telefone: {type: string}
