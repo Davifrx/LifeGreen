@@ -3,109 +3,71 @@ body{
     background-color: #F3FBEE;
 }
 
-/* =========================
-   LAYOUT CATÁLOGO
-========================= */
-
 .catalog-container{
-
     max-width:1400px;
-
-    margin:0 auto;
-
+    margin:130px auto;
     padding:3rem 2rem;
-
     display:flex;
-
     gap:4rem;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
-
 .sidebar{
-
     width:220px;
-
     flex-shrink:0;
 }
 
 .filter-group{
-
     margin-bottom:4rem;
 }
 
 .filter-group h2{
-
     font-size:2rem;
-
     color:#3D3D3D;
-
     margin-bottom:1.5rem;
 }
 
 .filter-group ul{
-
     list-style:none;
 }
 
 .filter-group li{
-
     margin-bottom:1rem;
 }
 
 .filter-group button{
-
     background:none;
-
     border:none;
-
     cursor:pointer;
-
     font-size:1.2rem;
-
     color:#666;
-
     transition:.3s;
 }
 
 .filter-group button:hover{
-
     color:#2F4F46;
 }
 
-/* =========================
-   ÁREA DOS PRODUTOS
-========================= */
+/* Produtos */
 
 .products-content{
-
     flex:1;
 }
 
 .products-header{
-
     margin-bottom:2rem;
 }
 
 .products-header h1{
-
     font-size:3rem;
-
     font-weight:500;
-
     color:#000;
 }
 
 .product-card{
-
     transition:.3s;
 }
 
 .product-card:hover{
-
     transform:translateY(-5px);
-
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
