@@ -71,3 +71,122 @@ body{
     transform:translateY(-5px);
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
+
+.products-grid {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem; 
+}
+
+
+/* --- Ajustes do Catálogo (Sidebar e Produtos) --- */
+
+@media (max-width: 768px) {
+    .catalog-container {
+        flex-direction: column; 
+        margin: 160px auto 4rem auto; 
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        width: 100%; 
+    }
+
+    .filter-group {
+        margin-bottom: 2rem; /* Diminui o espaçamento exagerado do desktop */
+    }
+
+    .filter-group h2 {
+        font-size: 1.5rem; /* Título um pouco menor no celular */
+        margin-bottom: 1rem;
+    }
+
+    .filter-group ul {
+        display: flex;
+        gap: 0.8rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+    }
+
+    .filter-group ul::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+    }
+
+    .filter-group li {
+        margin-bottom: 0; /* Remove a margem inferior do desktop */
+        flex-shrink: 0; /* Impede que os botões espremam o texto */
+    }
+
+    .filter-group button {
+        background-color: #e2f2da; 
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: #2F4F46;
+    }
+
+    .products-header h1 {
+        font-size: 2rem; 
+    }
+
+    .products {
+        padding: 0 1rem;
+    }
+
+    .products-header h1 {
+        font-size: 2rem;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+        gap: 1rem;
+        padding: 0 1rem;
+        justify-content: center;
+    }
+
+    .products-grid .product-card {
+        flex: none; 
+        width: 100%;
+        max-width: 220px; 
+        margin: 0 auto;   
+        min-height: auto;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-grid .product-card img {
+        width: 100%;
+        height: 140px; 
+        object-fit: cover;
+        margin-bottom: 0.8rem;
+    }
+
+    .products-grid .product-card h3 {
+        font-size: 1rem;
+        margin-bottom: .1rem;
+    }
+
+    .product-description {
+        font-size: .6rem;
+        margin-bottom: .2rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+
+    .products-grid .product-card button {
+        font-weight: 400;
+        padding: .4rem 2.2rem;
+        border-radius: 2px;
+        margin-top: auto;
+    }
+}

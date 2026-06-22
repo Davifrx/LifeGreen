@@ -115,3 +115,86 @@
     padding:1rem 2rem;
     border-radius:8px;
 }
+
+@media (max-width: 768px) {
+    .recipes-hero {
+        padding: 3rem 1rem 2rem; 
+    }
+
+    .recipes-hero h1 {
+        font-size: 2.2rem; 
+    }
+
+    /* --- 2. FILTROS ROLÁVEIS --- */
+    .recipes-filter {
+        gap: 0.6rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+        justify-content: flex-start; 
+        overflow-x: auto;           
+        flex-wrap: nowrap;           
+        scrollbar-width: none;       
+    }
+
+    .recipes-filter::-webkit-scrollbar {
+        display: none;              
+    }
+
+    .recipes-filter button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;           
+    }
+
+    /* --- 3. GRID DE RECEITAS DINÂMICO --- */
+    .recipes-grid {
+        
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.2rem;
+        padding: 0 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .recipe-card {
+        border-radius: 12px;
+    }
+
+    .recipe-card img {
+        height: 140px; 
+    }
+
+    .recipe-content {
+        padding: 1rem;
+    }
+
+    .recipe-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .recipe-content p {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .recipe-highlight {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+        padding: 0 1rem;
+        margin-bottom: 4rem;
+        text-align: center; 
+    }
+
+    .highlight-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .highlight-content p {
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight-content a {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}

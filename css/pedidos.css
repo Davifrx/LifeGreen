@@ -4,72 +4,105 @@ body{
 }
 
 /* Pedido confirmado */
-
-.order-success{
-    min-height:70vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:4rem 2rem;
+.order-success {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-.success-card{
-    background:white;
-    max-width:700px;
-    width:100%;
-    padding:3rem;
-    border-radius:16px;
-    text-align:center;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+.success-card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
 }
 
-.success-icon{
-    width:90px;
-    height:90px;
-    margin:0 auto 2rem;
-    border-radius:50%;
-    background:#AAB874;
-    color:#2F4F46;
-    font-size:3rem;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: #AAB874;
+    color: #2F4F46;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.success-card h1{
-    color:#2F4F46;
-    margin-bottom:1rem;
+.success-card h1 {
+    color: #2F4F46;
+    margin-bottom: 1rem;
 }
 
-.success-message{
-    color:#666;
-    margin-bottom:2rem;
+.success-message {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
-.order-info{
-    display:flex;
-    justify-content:space-between;
-    gap:1rem;
-    margin-bottom:2.5rem;
+.order-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.info-item{
-    flex:1;
-    background:#F3FBEE;
-    padding:1rem;
-    border-radius:10px;
+.info-item {
+    background: #F3FBEE;
+    padding: 1rem;
+    border-radius: 12px;
 }
 
-.info-item span{
-    display:block;
-    color:#777;
-    margin-bottom:.5rem;
+.info-item span {
+    display: block;
+    color: #666;
+    font-size: .9rem;
+    margin-bottom: .5rem;
 }
 
-.success-actions{
-    display:flex;
-    justify-content:center;
-    gap:1rem;
+.info-item strong {
+    color: #2F4F46;
+    font-size: 1rem;
+}
+
+.success-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.primary-btn,
+.secondary-btn {
+    flex: 1;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: .3s;
+}
+
+.primary-btn {
+    background: #2F4F46;
+    color: white;
+}
+
+.secondary-btn {
+    background: #AAB874;
+    color: #2F4F46;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-2px);
 }
 
 /* Acompanhar Pedido */
@@ -209,4 +242,158 @@ body{
     color:white;
     padding:.8rem 1.2rem;
     border-radius:8px;
+}
+
+@media (max-width: 768px) {
+
+    .success-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .success-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .order-info {
+        grid-template-columns: 1fr;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .success-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    /* Acompanhar Pedido */
+
+      .order-tracking{
+        padding: 2rem 1rem;
+    }
+
+    .tracking-header{
+        margin-bottom: 2.5rem;
+    }
+
+    .tracking-header h1{
+        font-size: 1.8rem;
+    }
+
+    /* Status do pedido */
+    .tracking-status{
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .status-line{
+        width: 50px;
+    }
+
+    .status-step span{
+        font-size: .8rem;
+    }
+
+    .status-circle{
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Cards de detalhes */
+    .tracking-details{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Histórico */
+    .previous-orders{
+        padding: 0 1rem 2rem;
+    }
+
+    .order-card{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .order-status{
+        align-self: flex-start;
+    }
+
+    .order-button{
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .order-success {
+        padding: 1rem;
+    }
+
+    .success-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .success-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .success-message {
+        font-size: .95rem;
+    }
+
+    /* Acompanhar Pedido */
+
+      .tracking-header h1{
+        font-size: 1.5rem;
+    }
+
+    .tracking-header p{
+        font-size: .95rem;
+    }
+
+    /* Linha do progresso na vertical */
+    .tracking-status{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .status-line{
+        width: 3px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .status-step{
+        gap: .5rem;
+    }
+
+    .status-circle{
+        width: 40px;
+        height: 40px;
+        font-size: .9rem;
+    }
+
+    .detail-card{
+        padding: 1.2rem;
+    }
+
+    .order-card{
+        padding: 1.2rem;
+    }
+
+    .order-button{
+        padding: .9rem;
+    }
 }

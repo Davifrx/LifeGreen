@@ -50,7 +50,7 @@ main{
     margin-bottom:2rem;
 }
 
-.product-price{
+.product-info .product-price{
     font-size:2.5rem;
     font-weight:700;
     color:#2F4F46;
@@ -96,7 +96,18 @@ main{
     color:#2F4F46;
 }
 
-.product-description,
+.products-grid{
+    display:flex;
+    gap:1.5rem;
+    flex-wrap:wrap;
+}
+
+.products-grid .product-card{
+    flex:0 0 260px;
+    width: 260px;
+}
+
+.product-description-section,
 .producer-section,
 .related-products{
     max-width:1200px;
@@ -110,4 +121,41 @@ main{
 .producer-section h2{
     margin-bottom:1rem;
     color:#2F4F46;
+}
+
+@media (max-width: 768px) {
+    /* Faz as duas colunas do produto (Imagem | Texto) virarem uma só coluna vertical */
+    .product-details {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .main-product-image {
+        height: 280px;
+    }
+
+    .product-info h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Empilha os botões de adicionar ao carrinho e assinatura */
+    .product-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .add-cart,
+    .add-subscription {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajusta o grid de produtos relacionados para telas menores */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
 }
